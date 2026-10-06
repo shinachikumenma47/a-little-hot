@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>a little hot｜間借りカレー屋</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap">
+<style>
+:root{--bg:#F4B91C;--ink:#3A1408;--chili:#C8280F;--card:#FFD25A;--line:#3A1408;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A0F07;--ink:#FFD25A;--chili:#FF6A45;--card:#3D1A0E;--line:#FFD25A}}
+:root[data-theme="dark"]{--bg:#2A0F07;--ink:#FFD25A;--chili:#FF6A45;--card:#3D1A0E;--line:#FFD25A}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.8}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+header{padding:56px 0 40px}
+h1{font-family:"Dela Gothic One","Hiragino Sans",sans-serif;font-weight:400;font-size:clamp(52px,15vw,132px);line-height:.95;margin:0;letter-spacing:-.02em}
+h1 .hot{color:var(--chili);display:inline-block;transform:rotate(-3deg)}
+.lead{font-size:18px;max-width:30em;margin:28px 0 0}
+section{padding:40px 0;border-top:3px solid var(--line)}
+h2{font-family:"Dela Gothic One",sans-serif;font-weight:400;font-size:28px;margin:0 0 20px}
+/* heat selector */
+.heat{background:var(--card);border:3px solid var(--line);border-radius:14px;padding:24px}
+.dots{display:flex;gap:10px;margin:0 0 16px}
+.dots button{flex:1;height:56px;border:3px solid var(--line);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:transparent;color:var(--ink);font:700 18px inherit;font-family:inherit;cursor:pointer}
+.dots button.on{background:var(--chili);color:#fff;border-color:var(--chili)}
+.dots button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+#heatName{font-family:"Dela Gothic One",sans-serif;font-size:24px;margin:0}
+#heatText{margin:6px 0 0}
+/* menu */
+.menu{list-style:none;margin:0;padding:0}
+.menu li{display:flex;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
+.menu b{font-size:18px}.menu small{display:block;font-size:14px;opacity:.85}
+.price{font-weight:700;white-space:nowrap}
+/* info */
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:12px 0;border-bottom:1px dashed var(--line);vertical-align:top}
+th{width:7em;font-weight:700}
+.note{font-size:14px;opacity:.85;margin-top:12px}
+.btn{display:inline-block;margin-top:16px;padding:12px 24px;background:var(--ink);color:var(--bg);font-weight:700;text-decoration:none;border-radius:999px}
+.btn:focus-visible{outline:3px solid var(--chili);outline-offset:3px}
+footer{padding:32px 0 48px;border-top:3px solid var(--line);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>a little <span class="hot">hot</span></h1>
+<p class="lead">間借りで営業している小さなカレー屋です。スパイスの香りと、ちょっとだけ辛い一皿を出しています。</p>
+</header>
+
+<section aria-labelledby="h-heat">
+<h2 id="h-heat">辛さを選ぶ</h2>
+<div class="heat">
+<div class="dots" role="group" aria-label="辛さレベル">
+<button type="button" data-l="0">1</button><button type="button" data-l="1">2</button><button type="button" data-l="2">3</button><button type="button" data-l="3">4</button><button type="button" data-l="4">5</button>
+</div>
+<p id="heatName"></p>
+<p id="heatText"></p>
+</div>
+</section>
+
+<section aria-labelledby="h-menu">
+<h2 id="h-menu">メニュー</h2>
+<ul class="menu">
+<li><span><b>スパイスチキンカレー</b><small>定番。骨付きチキンをじっくり煮込みました</small></span><span class="price">¥1,200</span></li>
+<li><span><b>キーマカレー</b><small>卵黄をのせて</small></span><span class="price">¥1,100</span></li>
+<li><span><b>季節野菜のカレー</b><small>動物性食材を使いません</small></span><span class="price">¥1,100</span></li>
+<li><span><b>あいがけ</b><small>好きな2種類を選べます</small></span><span class="price">¥1,500</span></li>
+</ul>
+<p class="note">※メニューと価格は仮のものです。実際の内容に差し替えてください。</p>
+</section>
+
+<section aria-labelledby="h-info">
+<h2 id="h-info">店舗情報</h2>
+<table>
+<tr><th>営業日</th><td>毎週○曜・○曜（変更はInstagramでお知らせします）</td></tr>
+<tr><th>営業時間</th><td>11:30〜15:00（なくなり次第終了）</td></tr>
+<tr><th>場所</th><td>○○（店舗名）内　〒000-0000 住所をここに入れます</td></tr>
+<tr><th>支払い</th><td>現金・各種キャッシュレス</td></tr>
+</table>
+<a class="btn" href="#" aria-label="Instagramで最新情報を見る">Instagramで最新情報を見る</a>
+</section>
+
+<footer>© a little hot ／ 間借りカレー屋</footer>
+</div>
+<script>
+const L=[["とても控えめ","辛いのが苦手な方や、お子さまにも。スパイスの香りを楽しめます。"],
+["ほんのり","食べ終わるころに、ふわっと温まる辛さです。"],
+["a little hot","店名どおりの標準。ちょっと辛い、がちょうどいい。"],
+["しっかり","汗が出はじめます。辛さ好きの方にどうぞ。"],
+["かなり辛い","本気の辛さです。水を用意してお待ちください。"]];
+const bs=document.querySelectorAll('.dots button');
+function set(i){bs.forEach((b,j)=>{b.classList.toggle('on',j<=i);b.setAttribute('aria-pressed',j<=i)});
+document.getElementById('heatName').textContent=L[i][0];document.getElementById('heatText').textContent=L[i][1]}
+bs.forEach((b,i)=>b.addEventListener('click',()=>set(i)));set(2);
+</script>
+</body>
+</html>
